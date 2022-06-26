@@ -14,7 +14,7 @@ def sign_up(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('mainapp:index')
+            return redirect('main:index')
     else:
         register_form = SignupForm()
     return render(request, 'registration/signup.html')
@@ -28,7 +28,7 @@ def change_password(request):
         if form.is_valid():
             user = form.save()
             update_session_auth_hash(request, user)
-            return redirect('mainapp:dashbord')
+            return redirect('main:dashbord')
     else:
         massage = 'Erroe When Change Password'
     context = {'massage': massage}
