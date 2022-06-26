@@ -1,0 +1,40 @@
+{% extends "components/dashbord.html" %}
+
+<!-- templates content -->
+{% block templates %}
+<div class="w-full">
+  <section class="text-gray-800 bg-gray-200 body-font">
+    <div class="container px-5 pt-12 mx-auto">
+      <div class="flex flex-wrap -m-4 text-center">
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">
+            {{today}}K
+          </h2>
+          <p class="leading-relaxed">Today</p>
+        </div>
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">
+            {{last_week}}K
+          </h2>
+          <p class="leading-relaxed">Last Week</p>
+        </div>
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">
+            {{last_month}}K
+          </h2>
+          <p class="leading-relaxed">Last Month</p>
+        </div>
+        <div class="p-4 sm:w-1/4 w-1/2">
+          <h2 class="title-font font-medium sm:text-4xl text-3xl text-gray-900">
+            {{all_expenses}}K
+          </h2>
+          <p class="leading-relaxed">All Time</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="bg-gray-200 py-16">
+    {% include "components/table_trancstion.html" %}
+  </div>
+</div>
+{% endblock templates %}

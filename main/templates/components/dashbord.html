@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+<!-- title block -->
+{% block title %} Dashbord {% endblock title %}
+
+<!-- content -->
+{% block content %}
+<div class="flex h-screen">
+  <!-- include -->
+  {% include "components/sidebar.html" %}
+  <!-- end block   -->
+
+  <aside class="w-full h-full">
+    <div class="w-full  overflow-y-auto">
+      <div class=" w-full h-screen flex items-start justify-center">
+       {% block templates %}
+         
+       {% endblock templates %}
+      </div>
+    </div>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+<!-- block title -->
+{% block title %} Home {% endblock title %}
+<!-- content -->
+{% block content %}
+
+<!-- component -->
+<div class="bg-gray-800">
+  <div class="container mx-auto">
+    <!-- row -->
+    <div class="flex flex-row text-center space-x-2 pt-20 pb-20">
+      <!-- income block -->
+      {% include "components/income_card.html" %}
+      <!-- end income block -->
+      <!-- income block -->
+      {% include "components/expenses_card.html" %}
+      <!-- end income block -->
+      <!-- income block -->
+      {% include "components/all_card.html" %}
+      <!-- end income block -->
+    </div>
+  </div>
+  <div class="mt-4 py-20">{% include "components/table_trancstion.html" %}</div>
+</div>
+{% endblock content %}
